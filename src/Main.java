@@ -1,5 +1,5 @@
 /**
- * @Discription: 引导类
+ * @Discription: 引导类，main
  * @Author: Damon
  * @Date: 2019/4/13 14:09
  */
