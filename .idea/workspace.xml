@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d77b8fb7-a8f5-43b6-9a49-96a9469066de" name="Default" comment="" />
+    <list default="true" id="d77b8fb7-a8f5-43b6-9a49-96a9469066de" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/GeneticAlgorithm/Floyed.class" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/GeneticAlgorithm/GeneticAlgorithm.class" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/GeneticAlgorithm/Individual.class" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/GeneticAlgorithm/Main.class" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/GeneticAlgorithm/Node.class" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/GeneticAlgorithm/OriginalDistance.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/GeneticAlgorithm/Path.class" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/GeneticAlgorithm/Population$1.class" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/GeneticAlgorithm/Population.class" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/GeneticAlgorithm/shortest.txt" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -215,7 +227,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1429" />
     <option name="y" value="285" />
     <option name="width" value="1386" />
@@ -483,7 +495,7 @@
     <option name="totallyTimeSpent" value="36493000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="216" width="1320" height="784" extended-state="7" />
+    <frame x="1912" y="216" width="1320" height="784" extended-state="6" />
     <layout>
       <window_info id="Key Promoter X" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
