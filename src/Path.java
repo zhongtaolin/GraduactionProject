@@ -53,7 +53,7 @@ public class Path {
      * 获得该路线消耗的总时间
      * @return
      */
-    public int getTimeCost(){
+    public int getTimeCost1(){
         if(timeCost > 0) {
             return timeCost;
         }
@@ -67,8 +67,86 @@ public class Path {
         return cost;
     }
 
+    /**
+     * 4人分区，7,7,7,5
+     * @return
+     */
+    public int getTimeCost7775() {
+        if (this.timeCost > 0) {
+            return this.timeCost;
+        }
+
+        int temp = 0, temp1 = 0, temp2 = 0,temp3 = 0;
+        for(int i=0; i+1<chromosome.length; i++){
+            // 0-6一组
+            if(i+1 < 7){
+                temp += distance[chromosome[i]][chromosome[i+1]];
+            }
+            // 7-13一组
+            if(7 <= i && i+1 < 14){
+                temp1 += distance[chromosome[i]][chromosome[i+1]];
+            }
+            // 14-20一组
+            if(14 <= i && i+1 < 21){
+                temp2 += distance[chromosome[i]][chromosome[i+1]];
+            }
+            // 21-25一组
+            if(21 <= i){
+                temp3 += distance[chromosome[i]][chromosome[i+1]];
+            }
+        }
+        temp += distance[chromosome[0]][chromosome[6]];
+        temp1 += distance[chromosome[7]][chromosome[13]];
+        temp2 += distance[chromosome[14]][chromosome[20]];
+        temp3 += distance[chromosome[21]][chromosome[25]];
+
+        int cost = temp + temp1 + temp2 + temp3;
+        this.timeCost = cost;
+        return cost;
+    }
+
+    /**
+     * 4人分区，7，7，6，6
+     * @return
+     */
+    public int getTimeCost() {
+        if (this.timeCost > 0) {
+            return this.timeCost;
+        }
+
+        int temp = 0, temp1 = 0, temp2 = 0,temp3 = 0;
+        for(int i=0; i+1<chromosome.length; i++){
+            // 0-6一组
+            if(i+1 < 7){
+                temp += distance[chromosome[i]][chromosome[i+1]];
+            }
+            // 7-13一组
+            if(7 <= i && i+1 < 14){
+                temp1 += distance[chromosome[i]][chromosome[i+1]];
+            }
+            // 14-19一组
+            if(14 <= i && i+1 < 20){
+                temp2 += distance[chromosome[i]][chromosome[i+1]];
+            }
+            // 10-25一组
+            if(20 <= i){
+                temp3 += distance[chromosome[i]][chromosome[i+1]];
+            }
+        }
+        temp += distance[chromosome[0]][chromosome[6]];
+        temp1 += distance[chromosome[7]][chromosome[13]];
+        temp2 += distance[chromosome[14]][chromosome[19]];
+        temp3 += distance[chromosome[20]][chromosome[25]];
+
+        int cost = temp + temp1 + temp2 + temp3;
+        this.timeCost = cost;
+        return cost;
+    }
+
+
     public void printShortestPath(){
         System.out.println(Arrays.toString(path));
+        System.out.println(Arrays.toString(chromosome));
     }
 
 }
