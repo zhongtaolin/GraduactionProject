@@ -3,7 +3,7 @@
  * @Author: Damon
  * @Date: 2019/4/13 14:09
  */
-public class Main {
+public class Main1 {
     public static void main(String[] args) {
         int maxGenerations = 500;
         int nodeNumber = 26;
@@ -29,10 +29,11 @@ public class Main {
 
         // 4、遗传代数初始化为1，判断是否满足终止条件，满足则退出；否则进入遗传流程
         int generation = 1;
-        while (!ga.isEnd(generation,maxGenerations)){
+        Path path = start;
+        while (!ga.isEnd(generation,maxGenerations) && path.getTimeCost()!=68){
 
             // 4.1 选择适应度值高的个体作为本代的解
-            Path path = new Path(population.getFittest(0), nodes);
+            path = new Path(population.getFittest(0), nodes);
             System.out.println("第" + generation + "代，最优解为" + path.getTimeCost());
 
             // 4.1 交叉
@@ -48,7 +49,7 @@ public class Main {
         }
 
         // 展示最好解
-        Path path = new Path(population.getFittest(0), nodes);
+        path = new Path(population.getFittest(0), nodes);
         System.out.println("经过" + generation + "代，最优解为" + path.getTimeCost());
         path.printShortestPath();
 

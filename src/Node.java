@@ -9,6 +9,8 @@ public class Node {
      */
     private String name;
 
+    private int checkTime;
+
     public Node() {
     }
 
@@ -22,6 +24,14 @@ public class Node {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getCheckTime() {
+        return checkTime;
+    }
+
+    public void setCheckTime(int checkTime) {
+        this.checkTime = checkTime;
     }
 
     @Override

@@ -71,7 +71,12 @@ public class GeneticAlgorithm {
         individual.setFitness(fitness);
         return fitness;
     }
-
+    public double individualFitness7775(Individual individual, Node[] nodes){
+        Path path = new Path(individual,nodes);
+        double fitness = 1.0/path.getTimeCost7775();
+        individual.setFitness(fitness);
+        return fitness;
+    }
     /**
      * 计算种群的平均适应度值
      * @param population
@@ -86,7 +91,15 @@ public class GeneticAlgorithm {
         double populationFitness = sumFitness/population.size();
         population.setPopulationFitness(populationFitness);
     }
+    public void populationFitness7775(Population population, Node[] nodes){
+        double sumFitness = 0.0;
+        for(Individual individual : population.getIndividuals()){
+            sumFitness += this.individualFitness7775(individual, nodes);
+        }
 
+        double populationFitness = sumFitness/population.size();
+        population.setPopulationFitness(populationFitness);
+    }
     /**
      * 从种群中选择一个亲代，采用锦标赛选择法
      * 随机挑选几个个体参赛，选出最好的
