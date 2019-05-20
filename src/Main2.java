@@ -1,24 +1,27 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 /**
  * @Discription: 引导类，main
  * @Author: Damon
- * @Date: 2019/4/13 14:09
+ * @Date: 2019-5-15 16:51:53
  */
 public class Main2 {
-    public static void main(String[] args) {
-        int maxGenerations = 500;
+    public static void main(String[] args) throws FileNotFoundException {
+        int maxGenerations = 800;
         int nodeNumber = 26;
         Node[] nodes = new Node[nodeNumber];
+        Scanner scanner = new Scanner(new File("E:\\javaCode\\graduactionCode\\src\\check_time.txt"));
         for(int i=0; i<nodeNumber; i++){
-            nodes[i] = new Node("XJ-" + (i+1));
+            nodes[i] = new Node("" + (i+1),scanner.nextInt());
         }
 
 
         // 1、初始化遗传算法参数
-
-        GeneticAlgorithm ga = new GeneticAlgorithm(300, 0.95, 0.002, 4, 10);
+        GeneticAlgorithm ga = new GeneticAlgorithm(300, 0.95, 0.001, 3, 10);
 
         // 2、初始化种群
-
         Population population = ga.initPopution(nodes.length);
 
         // 3、评估种群是否符合要求

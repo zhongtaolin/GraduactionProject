@@ -18,6 +18,11 @@ public class Node {
         this.name = name;
     }
 
+    public Node(String name, int checkTime) {
+        this.name = name;
+        this.checkTime = checkTime;
+    }
+
     public String getName() {
         return name;
     }
